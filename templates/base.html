@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="icon" href="{% static 'img/icon.png' %}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Muzeum w Wejsunach</title>
+    </head>
+    <body>        
+        <div class="logo">
+            <img src="{% static 'img/logo.png' %}">
+        </div>
+        <nav>
+            <ul class="menu">
+                {% if name == "Aktualności" %}      
+                    <li class="menu-item"><span class="menu-item-active">Aktualności</span></li>
+                {% else %}
+                    <li class="menu-item"><a href="{% url 'index' %}">Aktualności</a></li>
+                {% endif %}
+
+                {% if name == "O nas" %}   
+                    <li class="menu-item"><span class="menu-item-active">O nas</span></li>
+                {% else %}
+                    <li class="menu-item"><a href="{% url 'about' %}">O nas</a></li>
+                {% endif %}
+
+                {% if name == "Wydarzenia" %} 
+                    <li class="menu-item"><span class="menu-item-active">Wydarzenia</span></li>
+                {% else %}
+                    <li class="menu-item"><a href="{% url 'events' %}">Wydarzenia</a></li>
+                {% endif %}
+
+                {% if name == "Wystawy" %} 
+                    <li class="menu-item"><span class="menu-item-active">Wystawy</span></li>
+                {% else %}
+                    <li class="menu-item"><a href="{% url 'exhibitions' %}">Wystawy</a></li>
+                {% endif %}
+
+                {% if name == "Historia" %} 
+                    <li class="menu-item"><span class="menu-item-active">Historia</span></li>
+                {% else %}
+                    <li class="menu-item"><a href="{% url 'history' %}">Historia</a></li>
+                {% endif %}
+
+                {% if name == "Zwiedzanie" %}                    
+                    <li class="menu-item"><span class="menu-item-active">Zwiedzanie</span></li>
+                {% else %}                
+                    <li class="menu-item"><a href="{% url 'visits' %}">Zwiedzanie</a></li>
+                {% endif %}
+
+                {% if name == "Kontakt" %}                    
+                    <li class="menu-item"><span class="menu-item-active">Kontakt</span></li>
+                {% else %}                
+                    <li class="menu-item"><a href="{% url 'contact' %}">Kontakt</a></li>
+                {% endif %}
+
+                {% if name == "Konto bankowe" %}                    
+                    <li class="menu-item"><span class="menu-item-active">Konto bankowe</span></li>
+                {% else %}                
+                    <li class="menu-item"><a href="{% url 'bank_account' %}">Konto bankowe</a></li>
+                {% endif %}
+
+                
+            </ul>
+        </nav>                       
+        <main>
+           <article>
+            {% block body_block %}
+
+            {% endblock %}
+           </article>           
+        </main>        
+        <footer>
+            <div>&copy 2023 Adam Zalewski</div>                    
+          
+                <div><a href="{% url 'login' %}">Login</a></div>
+          
+        </footer>
+    </body>
+</html>

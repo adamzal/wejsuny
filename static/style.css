@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    background-color: #F7F5DD;
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+
+.logo{
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.logo > img{
+    height: 30vh;
+    max-width: 100%;
+}
+
+nav{
+    text-align: center;
+    position: sticky;
+    top: 0px;
+    border-top: 2px solid #44121F;
+    border-bottom: 2px solid #44121F;
+}
+
+.menu{
+    list-style-type: none;
+    padding: 0px;
+    background-color: white;
+    margin:0px;
+    width: 100%;
+}
+
+.menu-item{
+    display: inline-block;
+    padding: 20px;
+}
+
+.menu-item > a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-item > a:hover{
+    background-color: #00C9AE;
+    color:white;
+}
+
+.menu-item > a:active{
+    background-color: #00A78C;
+}
+
+.menu-item-active{
+    color: black;
+    font-size: 30px;
+    padding: 10px;
+    background-color: #00A78C;
+}
+
+main{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 900px;
+    min-height: 43.62vh;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    background-color: #44121F;
+    padding: 20px;
+}
+
+footer > div{
+    color: white;
+    padding: 5px;
+}
+
+footer > div > a{
+    color: white;
+    text-decoration: none;
+}
+
+.card{
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+.card > h1{
+    text-align: center;
+}
+
+.card > h1::first-letter{
+    color:#B37781;
+}
+
+.card > h2{
+    border-bottom: 2px dashed #B37781;
+    padding: 10px 0px;
+    margin-top: 0px;
+}
+
+.card > p{
+    font-size: 20px;
+}
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 800px) {
+    nav{
+        position: static;
+    }
+    .logo > img {
+        height: 20vh;
+    }
+    
+    .menu-item > a {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .menu-item-active{
+        font-size: 20px;
+        padding: 5px;
+    }
+    
+    main {
+        width: 90%;
+        max-width: 600px;
+    }
+    
+    .card > p {
+        font-size: 20px;
+    }
+
+    .card > div > iframe{
+        width: 200px;
+        height: 200px;
+    }
+}

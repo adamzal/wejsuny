@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block body_block %}
+
+<div class="card">
+    <h1>{{name}}</h1>
+</div>
+
+<div class="card">
+    <h2>Gdzie jesteśmy?</h2>
+    <div style="text-align: center;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21697.14654081617!2d21.627221059010555!3d53.686154085553035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e1fa72c67e2ff7%3A0xbe00a42a010d4e7a!2zS2_Fm2Npw7PFgiBFd2FuZ2VsaWNrby1BdWdzYnVyc2tp!5e0!3m2!1spl!2suk!4v1689190550505!5m2!1spl!2suk" width="500vw" height="500vh" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>    
+</div>
+
+<div class="card">
+    <h2>Dane kontaktowe</h2>    
+    <p>
+        <span class="material-symbols-outlined" style="float:left; margin-right: 10px;">
+            call
+        </span>
+        <div>790 763 777</div>
+    </p>
+
+    <p>
+        <span class="material-symbols-outlined" style="float:left; margin-right: 10px;">
+            call
+        </span>
+        <div>502 620 934</div>
+    </p>
+
+    <p>
+        <span class="material-symbols-outlined" style="float:left; margin-right: 10px;">
+            mail
+        </span>
+        <div><a href="mailto:muzeum.wejsuny@gmail.com">muzeum.wejsuny@gmail.com</a></div>
+    </p>
+
+    <p>
+        <span class="material-symbols-outlined" style="float:left; margin-right: 10px;">
+            link
+        </span>
+        <div><a href="http://www.pisz.luteranie.pl" target="_blank">www.pisz.luteranie.pl</a></div>
+    </p>
+</div>
+
+{% endblock %}
